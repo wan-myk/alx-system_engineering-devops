@@ -1,15 +1,14 @@
-# make changes to config file using Puppet
+#!/usr/bin/evn bash
+# using puppet to make changes to our configuration file
 
-include stdlib
+file { 'etc/ssh/sshconfig':
+	ensure => present,
 
-file_line { 'Refuse to authenticate using a password':
-  ensure => present,
-  path   => '/etc/ssh/ssh_config',
-  line   => 'PasswordAuthentication no',
-}
+content =>"
 
-file_line { 'Use private key':
-  ensure => present,
-  path   => '/etc/ssh/ssh_config',
-  line   => 'IdentityFile ~/.ssh/school'
+	#SSH Client Configuratiohn
+	host*
+	IdentityFle ~/.ssh.school
+	PasswordAuthentication no
+	",
 }
