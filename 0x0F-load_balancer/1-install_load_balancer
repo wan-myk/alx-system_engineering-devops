@@ -14,7 +14,7 @@ frontend mikeowusu.tech
 backend web_servers
         balance roundrobin
         server 196560-web-01 54.174.70.122
-        server 196560-web-02 34.201.174.248
+        server 196560-web-02 34.207.221.9
 ' >> /etc/haproxy/haproxy.cfg
 
 # Restart HAproxy service
