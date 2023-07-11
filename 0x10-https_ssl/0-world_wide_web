@@ -1,4 +1,4 @@
-!/usr/bin/env bash
+#!/usr/bin/env bash
 # Script that will display information about subdomains
 
 DNS_info () {
@@ -15,4 +15,4 @@ if [[ $# == 1 ]]; then
 else
     CONCAT="$2.$1"
     DNS_info $2 $CONCAT
-fi
+fi:
