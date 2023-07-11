@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+!/usr/bin/env bash
 # Script that will display information about subdomains
 
 DNS_info () {
