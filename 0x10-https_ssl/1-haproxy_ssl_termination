@@ -36,12 +36,10 @@ defaults
 frontend mikeowusu.tech
         bind 0:80
         default_backend web_servers
+	bind 0:443 ssl crt /etc/letsencrypt/live/www.mikeowusu.tech/mikeowusu.tech.pem
+	default_backend mikeowusu.tech_backend
 
-frontend web_frontend_secure
-	bind *:443 ssl crt /etc/letsencrypt/live/www.mikeowusu.tech/mikeowusu.tech.pem
-	default_backend 
-
-backend web_servers
+backend mikeowusu.tech_backend
         balance roundrobin
-        server 196560-web-01 54.174.70.122
-        server 196560-web-02 34.207.221.9
+        server 196560-web-01 54.174.70.122:80 check
+        server 196560-web-02 34.207.221.9:80 check
