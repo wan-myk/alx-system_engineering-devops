@@ -1,1 +1,28 @@
-https://medium.com/@besthor/what-happens-when-you-type-https-www-google-com-in-your-browser-and-press-enter-6fabb1389cd9
+
+Exploring the Journey of a Browser Request: Understanding the Web Stack
+
+Introduction:
+When you type "https://www.google.com" into your browser and hit Enter, a series of intricate processes unfold behind the scenes, enabling you to access the desired website. In this article, we will embark on a journey through the web stack, examining each step that takes place, from the initial DNS request to the final delivery of the webpage.
+
+DNS Request:
+The process begins with a DNS (Domain Name System) request. The browser extracts the domain name from the URL and sends a query to a DNS resolver or the local cache. The DNS resolver recursively resolves the domain name to an IP address, seeking information from authoritative DNS servers until it finds a match.
+TCP/IP:
+Once the browser obtains the IP address, it establishes a TCP (Transmission Control Protocol) connection with the web server hosting the requested website. The TCP protocol ensures reliable data transmission by breaking the information into packets, numbering them, and managing their reassembly upon arrival.
+Firewall:
+Before reaching the web server, the TCP packets may encounter a firewall, a security measure that monitors and filters incoming and outgoing network traffic. The firewall analyzes the packets based on predefined rules, granting or denying access based on factors such as port numbers, IP addresses, or specific patterns in the packet payload.
+HTTPS/SSL:
+If the requested website supports HTTPS (Hypertext Transfer Protocol Secure), the browser initiates a secure SSL/TLS (Secure Sockets Layer/Transport Layer Security) handshake. This process enables encryption and decryption of data exchanged between the browser and the web server, ensuring the confidentiality and integrity of the communication. The SSL certificate, obtained from a trusted third-party Certificate Authority (CA), verifies the identity of the web server.
+Load-Balancer:
+In scenarios where high traffic demands are expected, a load-balancer acts as a mediator between the browser and multiple web servers. It distributes incoming requests across the servers to achieve optimal resource utilization and enhance performance. Load-balancers can use various algorithms, such as round-robin or least connections, to distribute the traffic effectively.
+Web Server:
+Once the request reaches the web server, it processes the HTTP request, retrieves the requested resources, and generates an appropriate HTTP response. The web server can execute server-side scripts or interact with application servers if necessary. Common web servers include Apache, Nginx, and Microsoft IIS.
+Application Server:
+In cases where dynamic content or business logic is involved, the web server communicates with an application server. The application server runs the necessary software frameworks or services, processes the request, and generates a response based on the requested functionality. Examples of application servers include Tomcat, Node.js, and Microsoft IIS.
+Database:
+If the requested content relies on data stored in a database, the application server interacts with the database management system (DBMS). The DBMS retrieves the required data, which the application server then incorporates into the response. Popular database systems include MySQL, PostgreSQL, MongoDB, and Oracle.
+Conclusion:
+The process of accessing a website involves a complex interplay of various components within the web stack. Understanding the journey from the DNS request to the final delivery of the webpage helps us appreciate the intricate mechanisms at play. As software engineers, comprehending the web stack's inner workings equips us with valuable knowledge to optimize performance, troubleshoot issues, and design robust web applications.
+
+By delving into the nuances of DNS, TCP/IP, firewalls, HTTPS/SSL, load-balancers, web servers, application servers, and databases, we can gain a deeper understanding of the web stack and excel in related software engineering roles.
+
+Remember, mastering these concepts not only helps in interviews but also strengthens your ability to develop reliable, efficient, and secure web applications in the real world.
